@@ -11,10 +11,7 @@ app.use(express.json());
 
 async function connect() {
   try {
-    await mongoose.connect("mongodb://localhost:27017/EmployeeDB" , {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+    await mongoose.connect("mongodb://localhost:27017/EmployeeDB")
     console.log("MongoDB connected successfully");
   } catch (err) {
     console.error("MongoDB connection error:", err);
@@ -29,7 +26,7 @@ app.post("/register",async (req, res) => {
 
 
 
-app.listen(3001, (req, res) => {
+app.listen(3001, async (req, res) => {
   console.log("Server is running");
-  connect();
+  await connect();
 });

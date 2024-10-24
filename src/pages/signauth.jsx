@@ -69,15 +69,19 @@ export default function SignUp() {
                 />
               </div>
 
-              <button type="submit" className="submit" onSubmit={()=>handleSubmit()}>
+              <button
+                type="submit"
+                className="submit"
+                onSubmit={() => handleSubmit()}
+              >
                 Sign up
               </button>
-              <div className="already-text">
-                <p>
-                  Already Signed up? <a href="/">Login</a>
-                </p>
-              </div>
             </form>
+            <div className="already-text">
+              <p>
+                Already Signed up? <a href="/">Login</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
