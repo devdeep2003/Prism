@@ -26,7 +26,7 @@ app.post("/register",async (req, res) => {
 
 
 
-app.listen(3001, async (req, res) => {
+app.listen(3001, async () => {
   console.log("Server is running");
   await connect();
 });
